@@ -44,7 +44,7 @@ String getFileString() {
     String fileString;
 
     while (fileInputStream.good() && fileInputStream.is_open()) {
-        char currentCharacter = fileInputStream.get();
+        char currentCharacter = static_cast<char>(fileInputStream.get());
 
         if (isCharAcceptable(currentCharacter)) {
             fileString.push_back(currentCharacter);
@@ -116,6 +116,9 @@ int main() {
                             openLoops++;
                     }
                 }
+                break;
+            default:
+                break;
         }
     }
 
