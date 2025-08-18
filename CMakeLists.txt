@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 4.0)
 project(untitled)
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(untitled tito.cpp display.cpp common.h main.cpp)
+add_executable(untitled display.cpp common.h gl.c tito.cpp)
+target_include_directories(untitled PRIVATE include)
 
-find_package(glfw3 CONFIG REQUIRED)
-target_link_libraries(untitled PRIVATE glfw3)
+target_link_libraries(untitled ${CMAKE_SOURCE_DIR}/lib/libglfw3.a)

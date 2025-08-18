@@ -34,7 +34,7 @@ class Display {
 private:
     std::string bfProgram;
 public:
-    explicit Display(const std::string& bfProgram);
+    Display(const std::string& bfProgram);
     void update();
     ~Display();
 };
