@@ -1,10 +1,13 @@
 #include <string>
+#include <thread>
+
 #include "common.h"
 #include "glad/gl.h"
 #include "GLFW/glfw3.h"
 
 int main() {
     Display display("");
+    std::this_thread::sleep_for(std::chrono::nanoseconds(50000000000));
 }
 
 void error_callback(int error, const char* description)
